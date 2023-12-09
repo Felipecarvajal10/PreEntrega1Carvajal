@@ -44,7 +44,7 @@ if (cantidad === 1) {
   descuento = 0.25;
 }
 
-const subtotal = valor(seleccion) * cantidad;
+const subtotal = obtenerValor(seleccion) * cantidad;
 const totalConDescuento = subtotal * (1 - descuento);
 
 alert(
@@ -53,7 +53,7 @@ alert(
   }%\nTotal a pagar: $${totalConDescuento.toFixed(1)}`
 );
 
-function valor(seleccion) {
+function obtenerValor(seleccion) {
   switch (seleccion) {
     case "1":
       return 30;
